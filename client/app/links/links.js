@@ -8,6 +8,7 @@ angular.module('shortly.links', [])
   $scope.getLinks = function(){
     console.log('controller wants links!');
     Links.getLinks().then(function(links) {
+      console.log(links);
       $scope.data.links = links;
     });
   };

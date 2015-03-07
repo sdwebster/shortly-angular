@@ -1,6 +1,23 @@
 <div id='container'>
-<!-- Your code here -->
-
+<!-- new link creation page -->
+  <div class='navigation'>
+    <ul>
+      <li><a href="/#/links">Links</a></li>
+      <li><a href="/#/shorten">Make a new link!</a></li>
+    </ul>
+  </div>
+  <div class="creator">
+    <h1>Add a new link!</h1>
+    <form name="createLink" ng-submit='addLink()'>
+      <input type='text' ng-model='link.url'>
+      <button>Compress!</button>
+    </form>
+  </div>
+  <div class='link' ng-show='display'>
+    <img src='../../assets/redirect_icon.png' />
+    <div class='visits'><div class='count'>{{ link.visits }}</div>Visits</div>
+    <div class='title'>{{ link.title }}</div>
+    <div class='original'>{{ link.url }}</div>
+    <div class='info'>{{ link.base_url + '/' + link.code }}</div>
+  </div>
 </div>
-
-
