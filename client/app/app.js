@@ -6,7 +6,6 @@ angular.module('shortly', [
   'ngRoute'
 ])
 .config(function($routeProvider, $httpProvider) {
-  console.log('called config function turtle');
   $routeProvider
     .when('/signin', {
       templateUrl: 'app/auth/signin.html',
