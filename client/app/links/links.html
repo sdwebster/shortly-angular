@@ -1,12 +1,7 @@
 <div id='container'>
-  <div class='navigation'>
-    <ul>
-      <li><a href="/#/links">Links</a></li>
-      <li><a href="/#/shorten">Make a new link!</a></li>
-    </ul>
-  </div>
+  <input type="text" ng-model="search.title">
   <ul>
-    <div class='link' ng-repeat="link in data.links">
+    <div class='link' ng-repeat="link in data.links | filter:search:strict | orderBy : '-visits'">
       <img src='../../assets/redirect_icon.png' />
       <div class='visits'><div class='count'>{{ link.visits }}</div>Visits</div>
       <div class='title'>{{ link.title }}</div>

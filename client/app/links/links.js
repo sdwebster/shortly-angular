@@ -1,9 +1,8 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links) {
-  // Your code here
+.controller('LinksController', function ($rootScope, $scope, Links) {
   $scope.data = {};
-
+  $rootScope.navable = true;
   // Called when controller is loaded
   $scope.getLinks = function(){
     console.log('controller wants links!');
@@ -13,5 +12,4 @@ angular.module('shortly.links', [])
     });
   };
   $scope.getLinks();
-  // $scope.$on('$viewContentLoaded', $scope.getLinks);
 });

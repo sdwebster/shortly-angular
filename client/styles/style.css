@@ -12,7 +12,12 @@ a {
 
 h1 {
   font-style: italic;
+  /*margin-left: 10px;*/
   margin-bottom: 10px;
+}
+
+h3 {
+  /*margin-left: 10px;*/
 }
 
 .navigation {
@@ -32,12 +37,12 @@ h1 {
 }
 
 .navigation li a {
-  width: 100px;
+  width: 130px;
   height: 20px;
   line-height: 20px;
-  padding: 10px;
+  padding: 10px 0 10px 10px;
   display: block;
-  text-align: center;
+  text-align: left;
 }
 
 .navigation li a:hover {
@@ -93,8 +98,12 @@ h1 {
   margin-left: 55px;
 }
 
+.form-control {
+  max-width: 400px;
+}
+
 form {
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 input {

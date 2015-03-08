@@ -3,21 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-    <h1>Shortly</h1>
+    <div class="container">
+      <h1>Shortly</h1>
+      <div class='navigation' ng-show='navable'>
+        <ul>
+          <li><a href="/#/links">See all links</a></li>
+          <li><a href="/#/shorten">Make a new link!</a></li>
+        </ul>
+      </div>
 
-    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+      <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+      <div ng-view></div>
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+      <script src="lib/angular/angular.js"></script>
+      <script src="lib/angular-route/angular-route.js"></script>
 
-    <script src="app/auth/auth.js"></script>
-    <script src="app/links/links.js"></script>
-    <script src="app/shorten/shorten.js"></script>
-    <script src="app/services/services.js"></script>
-    <script src="app/app.js"></script>
+      <script src="app/auth/auth.js"></script>
+      <script src="app/links/links.js"></script>
+      <script src="app/shorten/shorten.js"></script>
+      <script src="app/services/services.js"></script>
+      <script src="app/app.js"></script>
+    </div>
   </body>
 </html>
